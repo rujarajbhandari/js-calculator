@@ -8,7 +8,6 @@ const specialkeys = ['*', '/', '+', '-']; //special function keys
 //everyting contained inside init
 function init() {
   document.title = "JavaScript Calculator";
-  console.log('ready');
   //switches to turn on and off
   let decimal = false;//decimal point('.')
   let evalSwitch = false;
@@ -35,7 +34,6 @@ function init() {
 
   //create buttons using loop through array items available
   all.forEach(function (val) {
-    //console.log(val);
     btnGenerator(val, addOutput);
   })
 
@@ -52,7 +50,6 @@ function init() {
 
   function evalOutput() {
     cOutput('black');
-    console.log('=');
     if (output.value === "") {//output value must have a value
       cOutput('red');//throw error if no value
     }
@@ -122,9 +119,7 @@ function init() {
   }
 
   function addOutput(e) {
-    console.log(decimal);
     cOutput('black');
-    //console.log(e.target.val);
     //track char for decimal places (error-handling)
     let char = e.target.val;
     if (char == '.') {
@@ -142,10 +137,4 @@ function init() {
     }
     output.value += char;
   }
-
-// function myEventHandler(e) {
-//     var keyCode = e.keyCode;
-//     console.log(e, keyCode, e.which)
-// };
-
 }
