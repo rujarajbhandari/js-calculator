@@ -1,3 +1,3 @@
 # js-calculator
 
-## this is a calculator using JS only
+## This is a calculator using JS only
